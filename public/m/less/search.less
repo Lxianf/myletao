@@ -1,0 +1,62 @@
+@import './base.less';
+#main {
+    .search-form {
+        position: relative;
+        padding: 10px;
+        padding-right: 70px;
+        >input {
+            height: 30px;
+            background-color: #fff;
+            color: #000;
+            text-align: left;
+            border: 1px solid @main-color;
+            margin-bottom: 0;
+            border-radius: 5px 0 0 5px;
+            font-size: 12px;
+        }
+        >button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            height: 30px;
+            width: 60px;
+            border: 1px solid @main-color;
+            background-color: @main-color;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    .search-history {
+        padding: 0 10px;
+        .search-history-heading {
+            >span {
+                font-size: 12px;
+                line-height: 14px;
+                &:first-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+        .search-history-list {
+            >ul {
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                >li {
+                    >a {
+                        display: block;
+                        font-size: 12px;
+                        padding: 5px;
+                        line-height: 22px;
+                        border-bottom: 1px solid #ccc;
+                        >i {
+                            float: right;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

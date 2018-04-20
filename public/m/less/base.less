@@ -3,7 +3,13 @@
 img {
     vertical-align: middle;
 }
-
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
 #header {
     height: 45px;
     background-color: @main-color;
@@ -21,8 +27,26 @@ img {
     .fa-search {
         color: #fff;
         position: absolute;
-        right: 20px;
+        right: 10px;
         top: 14px;
+    }
+    .fa-arrow-left{
+        color: #fff;
+        position: absolute;
+        top: 14px;
+        left: 10px;
+    }
+    >form{
+        padding: 0 35px;
+        >input{
+            background-color: #fff;
+            width: 100%;
+            height: 31px;
+            margin-top: 7px;
+            text-align: left;
+            color: rgb(145, 142, 142);
+            font-size: 14px;
+        }
     }
 }
 
@@ -60,5 +84,16 @@ body {
 #main {
     padding-top: 45px;
     padding-bottom: 50px;
+    height: 100%;
     background-color: #fff;
+}
+
+[class^="fa-"],
+[class*="fa-"] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

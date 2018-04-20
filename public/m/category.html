@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分页</title>
+    <!-- 站点图标 -->
+    <link type="image/x-icon" rel="shortcut icon" href="./images/favicon.ico">
+
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/category.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="" class="fa-arrow-left"></a>
+        <form action="#">
+            <input type="search" placeholder="请输入你要搜索的商品">
+        </form>
+        <a href="./search.html" class="fa-search"></a>
+    </header>
+    <main id="main">
+        <div class="category-left mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="category-right mui-scroll-wrapper">
+            <div class="mui-scroll"></div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa-home active">
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa-bars">
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="" class="fa-shopping-cart">
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="" class="fa-user">
+                    <span>会员中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/html" id="categoryLeftTmp">
+        {{each rows as value i}}
+            <li>
+                <a href="#" data-id='{{value.id}}'>{{value.categoryName}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="categoryRightTmp">
+            <p>热门分类</p>
+            <div class="mui-row">
+                {{each rows as value i}}
+                    <div class="mui-col-xs-4">
+                        <a href="#">
+                            <img src="{{value.brandLogo}}" alt="">
+                            <p>{{value.brandName}}</p>
+                        </a>
+                    </div>
+                {{/each}}
+            </div>
+            
+        </script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>
